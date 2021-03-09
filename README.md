@@ -1,1 +1,1 @@
-# 'actuarialsymbol' example
+# `actuarialsymbol` example
