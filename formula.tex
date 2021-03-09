@@ -1,0 +1,249 @@
+\documentclass[11pt,legno]{article}
+%\input double
+\input epsf
+\usepackage{epsf}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\textheight = 8.7 in
+\textwidth=6.5 in
+\pagestyle{plain}
+\oddsidemargin=0 in
+\topmargin=-.0 in
+\renewcommand{\baselinestretch}{1.6}
+
+
+\usepackage{geometry} \geometry{left=2.5cm,right=2.5cm,top=1.5cm,bottom=1.5cm}
+
+\usepackage{setspace}
+\doublespacing
+
+
+\usepackage{actuarialangle}
+\usepackage{actuarialsymbol}
+
+\setstretch{1.5}
+
+
+\newcommand{\axn}{\ax{\angln}}
+\newcommand{\sxn}{\sx{\angln}}
+\newcommand{\axk}{\ax{\angl{k}}}
+\newcommand{\sxk}{\sx{\angl{k}}}
+\newcommand{\axinf}{\ax{\angl{\infty}}}
+\newcommand{\axxinf}{\ax**{\angl{\infty}}}
+\newcommand{\sxinf}{\sx{\angl{\infty}}}
+\newcommand{\axxn}{\ax**{\angln}}
+\newcommand{\sxxn}{\sx**{\angln}}
+
+\begin{document}
+	
+
+$I_b = I_e + \frac{1}{72}I_e$
+
+$\delta_t=\frac{a'(t)}{a(t)}$ simple $\delta_t=\frac{i}{1+it}$ compound $\delta=\ln(1+i)$\quad $i=\frac{d}{1-d} = d + id$\quad $d=iv=1-v$
+\\
+level annuity
+
+$\ax{\angln i} = v\frac{1-v^n}{1-v}=\frac{1-v^n}{i}$\quad $1=v^n + i \ax{\angln i}$
+
+$\ax**{\angln i}=\frac{1-v^n}{d} = (1+i)\ax{\angln i} $
+
+$\sx{\angl{n+k}} = (1+i)^k\sx{\angln} + \frac{(1+i)^k-1}{i}$
+
+deferred immediate $PV= \ax{\angl{m+n}} - \ax{\angl{m}} = v^m\ax{\angl{n}}$\quad due $PV= \ax**{\angl{m+n}} - \ax**{\angl{m}} = v^m\ax**{\angl{n}}$
+
+perpetuity $\ax{\angl{\infty}}=\frac{1}{i}$\quad $\ax**{\angl{\infty}}=\frac{1}{d}$\quad $\ax**{\angl{\infty}} = 1 + \ax{\angl{\infty}}=1+\frac{1}{i}=\frac{1}{d}$\quad $\ax{\angl{n}} = \ax{\angl{\infty}} - v^n \ax{\angl{\infty}}$
+
+$k$ c/p immediate $PV = v^k\frac{1-v^n}{1-v^k}=\frac{1-v^n}{(1+i)^k-1} = \frac{\axn}{\sxk}$\quad due $PV =  \frac{\axn}{\axk}$
+
+\qquad perpetuity immediate $PV =\frac{1}{i\sxk}$\quad due $PV =  \frac{1}{i\axk}$
+
+$m$ p/c $1/m$ each $\ax{\angln}[(m)] = \frac{v^{\frac{1}{m}}}{m}\frac{1-v^n}{1-v^{\frac{1}{m}}}=\frac{1-v^n}{i^{(m)}}=\frac{i}{i^{(m)}}\axn = \sx{\angl{1}}[(m)]\axn$\quad $\ax**{\angln}[(m)] = \frac{i}{d^{(m)}}\axn = \sx**{\angl{1}}[(m)]\axn$
+
+continuous $\lim i^{(m)} = \lim d^{(m)} = \delta$\quad $\ax*{\angln } = \frac{1 - v^n}{\delta}= \frac{1 - e^{-n\delta}}{\delta} = \frac{i}{\delta}\axn = \frac{d}{\delta}\axxn$
+\quad perpetuity  $\ax*{\angl{\infty}} =\frac{1}{\delta}$
+\\
+varying annuity 
+
+arithmetic progression  immediate $PV = P\axn + Q\frac{\axn - nv^n}{i}$\quad due $PV = P\axxn + Q\frac{\axn - nv^n}{d}$
+
+\qquad increasing $P=Q=1$. $(Ia)_{\angln} = \axn + \frac{\axn -nv^n}{i}=\frac{\axxn -nv^n}{i}$\quad $(I\ax**{})_{\angln} =\frac{\axxn -nv^n}{d}$ 
+
+\qquad $(Is)_{\angln} =\frac{\sxxn -n}{i}=\frac{\sx{\angl{n+1}} -(n+1)}{i}$\quad $(I\sx**{})_{\angln} =\frac{\sxxn -n}{d}=\frac{\sx{\angl{n+1}} -(n+1)}{d}$ 
+
+\qquad decreasing $P=n$, $Q=-1$. $(Da)_{\angln} = n\axn - \frac{\axn -nv^n}{i}=\frac{n -\axn }{i}$\quad $(D\ax**{})_{\angln} =\frac{n -\axn}{d}$ 
+
+\qquad $(Ia)_{\angln} +(Da)_{\angln} =(n+1)\axn$
+
+\qquad perpetuity  immediate $PV = P\axinf + Q\frac{\axinf}{i} = \frac{P}{i} + \frac{Q}{i^2}$\quad due $PV = P\axxinf + Q\frac{\axinf}{d} = \frac{P}{d} + \frac{Q}{id}$
+
+\qquad $(Ia)_{\angl{\infty}} = \frac{1}{i}+ \frac{1}{i^2}$ \quad $(I\ax**{})_{\angl{\infty}} = \frac{1}{d^2}$ 
+
+\qquad $k$ c/p immediate $PV =  \frac{\frac{\axn}{\axk}-\frac{n}{k}v^n}{i\sxk}$\quad due $PV =  \frac{\frac{\axn}{\axk}-\frac{n}{k}v^n}{i\axk}$
+
+\qquad $m$ p/c $\frac{k}{m}\sx{\angln \frac{i^{(m)}}{m}}=k\frac{i}{i^{(m)}}$ at $k$th.
+$(Ia)_{\angln}^{(m)} = \frac{i}{i^{(m)}}(Ia)_{\angln} =\frac{\axxn - nv^n}{i^{(m)}}$\quad $(Ia)_{\angln}^{(m)} = \frac{\axxn -nv^n}{d^{(m)}}$
+
+\qquad mthly increasing mthly annuity. $(I^{(m)}a)_{\angln}^{(m)} =\frac{\axxn^{(m)} - nv^n}{i^{(m)}}$\quad $(I^{(m)}\ax**{})_{\angln}^{(m)} = \frac{\axxn^{(m)} -nv^n}{d^{(m)}}$
+
+\qquad continuous $PV = \int_0^n f(t)e^{-\int_0^t\delta_rdr}dt$
+
+\qquad\qquad increasing $f(t)=t$\quad $(\bar{I}\bar{a})_{\angln} = \int_0^n tv^tdt=\frac{\ax*{\angln } - nv^n}{\delta}$
+
+\qquad\qquad
+decreasing $f(t)=n-t$\quad $(\bar{D}\bar{a})_{\angln} = \int_0^n (n-t)v^tdt=\frac{n -\ax*{\angln } }{\delta}$
+
+\qquad\qquad perpetuity  $(\bar{I}\bar{a})_{\angl{\infty}} =\frac{1}{\delta^2}$
+
+
+
+geometric progression
+
+\qquad  increasing $1+k$  immediate $PV=\begin{cases}
+nv &k=i\\ \frac{1-\left(\frac{1+k}{1+i}\right)^n}{i-k} &k\ne i
+\end{cases}$\quad due $PV=\begin{cases}
+n &k=i\\ (1+i)\frac{1-\left(\frac{1+k}{1+i}\right)^n}{i-k} &k\ne i
+\end{cases}$
+
+\qquad decreasing $1-k$ immediate $PV= \frac{1-\left(\frac{1-k}{1+i}\right)^n}{i+k}$\quad due $PV= (1+i)\frac{1-\left(\frac{1-k}{1+i}\right)^n}{i+k}$
+
+\qquad perpetuity $k<i$ immediate $PV= \frac{1}{i-k}$\quad due $PV= \frac{1+i}{i-k}$
+
+$NPV(i) = \sum_{k=0}^{n} v^{t_k} (R_{t_k}-C_{t_k}) = \sum_{k=0}^{n} v^{t_k} c_{t_k}$
+
+reinvest at $j$, $FV = 1 + i\sx{\angln j}$
+
+dollar weighted rate of return $B = A + C  + I = A + [\sum_{0\le t\le 1}  c_{t}] + [iA + \sum_{0\le t\le 1}  c_{t}[(1+i)^{1-t}-1]]$
+
+\qquad $(1+i)^{1-t}\approx (1-t)i$\quad $i\approx \frac{I}{A + \sum_{0\le t\le 1}  c_{t}(1-t)}=\frac{I}{\mbox{exposure associated with }i}$
+
+\qquad assumed lump sum at $k\approx \frac{1}{C} \sum_{0\le t\le 1} tc_t$, $i\approx \frac{I}{A + (1-k)C} $.\quad $i\approx\frac{2I}{A+B-I}$ assume $k=0.5$
+
+time weighted rate of return $(1+i) = (1+j_1)(1+j_2)\dots(1+j_n)$
+
+loan $L$ with PMT $P$. outstanding loan balance $B_t^p = P\ax{\angl{n-t}} = L(1+i)^t - P\sx{\angl{t}} = B_t^r$
+\\
+amortization.
+
+$L = \axn$ with $P=1$.
+
+\qquad outstanding loan balance $ B_k^p = \ax{\angl{n-k+1}} - v^{n-k+1}= \ax{\angl{n-k}}$. 
+
+\qquad interest paid $iB_{k-1}^p=i \ax{\angl{n-k+1}} = 1-v^{n-k+1}$. principal paid $v^{n-k+1}$.
+
+$k$ c/p.
+
+\qquad outstanding loan balance $ B_{mk}^p = \frac{\ax{\angl{n-(m-1)k}}}{\sxk} - v^{n-(m-1)k}= \frac{\ax{\angl{n-mk}}}{\sxk}$. 
+
+\qquad interest paid $[(1+i)^k-1]B_{(m-1)k}^p=[(1+i)^k-1] \frac{\ax{\angl{n-(m-1)k}}}{\sxk} = 1-v^{n-(m-1)k}$. 
+
+\qquad principal paid $v^{n-(m-1)k}$.
+
+$m$ p/c.
+
+\qquad outstanding loan balance $ B_{\frac{t}{m}}^p = \ax{\angl{n-\frac{t-1}{m}}}[(m)] - \frac{1}{m}v^{n-\frac{t-1}{m}}= \ax{\angl{n-\frac{t}{m}}}[(m)]$. 
+
+\qquad interest paid $\frac{i^{(m)}}{m}B_{\frac{t-1}{m}}^p= \frac{i^{(m)}}{m}\ax{\angl{n-\frac{t-1}{m}}}[(m)] = \frac{1}{m}(1-v^{n-\frac{t-1}{m}})$. 
+
+\qquad principal paid $\frac{1}{m}v^{n-\frac{t-1}{m}}$.
+\\
+sinking fund. 
+
+$L=1$. interest paid $i$. interest rate on SF $j$. SF deposit $1/\sx{\angl{n}j}$. 
+
+\qquad  at bgn of $t$ period, SF BAL $\sx{\angl{t-1}j}/\sx{\angl{n}j}$. during $t$ period, interest earned on SF $j\sx{\angl{t-1}j}/\sx{\angl{n}j}$. 
+
+\qquad  at end of $t$ period, SF BAL $\sx{\angl{t}j}/\sx{\angl{n}j}$ and net amt of loan $1-\sx{\angl{t}j}/\sx{\angl{n}j}$. 
+
+\qquad  in $t$ period, net interest paid $i-(j\sx{\angl{t-1}j}/\sx{\angl{n}j})$ 
+
+\qquad  change in amt of loan $(1-\sx{\angl{t-1}j}/\sx{\angl{n}j}) - (1-\sx{\angl{t}j}/\sx{\angl{n}j}) = (1+j)^{t-1}/\sx{\angl{n}j}$.
+
+amortization $\frac{1}{\axn} = \frac{1}{\sxn}+i$ sinking fund.
+
+level PMT=1 reinvest at $j$. $PV=\ax{\angl{n}i\& j}$. interest paid $i\ax{\angl{n}i\& j}$. SF deposit $1-i\ax{\angl{n}i\& j}$. 
+
+$(1-i\ax{\angl{n}i\& j})\sx{\angl{n}j}=\ax{\angl{n}i\& j}$. 
+$\ax{\angl{n}i\& j}=\frac{\sx{\angl{n}j}}{1+i\sx{\angl{n}j}}$. 
+
+$\frac{1}{\ax{\angl{n}i\& j}} = \frac{1}{\sx{\angl{n}j}}+i = \frac{1}{\ax{\angl{n}j}}+ (i-j)$. 
+$\ax{\angl{n}i\& j}=\frac{\ax{\angl{n}j}}{1+(i-j)\ax{\angl{n}j}}$.
+\\
+bond (price $P$, YTM $i$)
+
+(face val $F$, redemption val $C$, coupon rate $r$, modified coupon rate $g=\frac{Fr}{C}$, period $n$) 
+
+PV of $C$ at YTM, $K=Cv^n$. base amt $G=\frac{Fr}{i}$
+
+basic formula $P=Fr\axn + Cv^n = Fr\axn + K$
+
+premium/discount formula $P=Fr\axn + C(1-i\axn) = C + (Fr-Ci)\axn$
+
+base amt formula $P = Gi\axn + Cv^n = G + (C-G)v^n$
+
+Makeham formula $P = Cg\axn + K = K + \frac{g}{i}(C-K)$
+
+$k$ c/p, $P = Fr\frac{\axn}{\sxk} + Cv^n$
+
+$m$ p/c, $P = mFr\axn[(m)] + Cv^n$
+
+premium/discount $P-C = (Fr-Ci)\axn = C(g-i)\axn$
+
+BV $B_t = Fr\ax{\angl{n-t}} + Cv^{n-t}$, $B_0=P$, $B_n=C$
+
+bond amortization schedule. $B_t = B_0 - \sum_{k=1}^{t}P_k$. coupon $Fr$
+
+\qquad interest earned $I_t = iB_{t-1} = i[ Fr\ax{\angl{n-t+1}} + Cv^{n-t+1}] = Cg + C(i-g)v^{n-t+1}$
+
+\qquad principal adjustment $P_t = Fr - I_t = C(i-g)v^{n-t+1}$
+
+\qquad straight line method $P_t = \frac{P-C}{n}$, $I_t=Fr-P_t$
+
+accrued coupon $Fr_k$. flat price $B_{t+k}^f= (B_{t+1} + Fr)v^{1-k} = Fr_k + B_{t+k}^m$ market price
+
+\qquad theoretical method $B_{t+k}^f = (1+i)^kB_t$, $Fr_k = Fr\frac{(1+i)^k-1}{i}$, $B_{t+k}^m = (1+i)^kB_t - Fr\frac{(1+i)^k-1}{i}$
+
+\qquad practical method $B_{t+k}^f = (1+ki)B_t$, $Fr_k = kFr$, $B_{t+k}^m = (1+ki)B_t - kFr = (1-k)B_t + kB_{t+1}$
+
+\qquad semi-theoretical method $B_{t+k}^f = (1+i)^kB_t$, $Fr_k = kFr$, $B_{t+k}^m = (1+i)^kB_t - kFr$
+
+\qquad premium/discount $B_{t+k}^m-C$
+
+preferred stock. dividend growth $k$. $PV = \frac{D}{i-k}$
+
+Fisher equation $i' = \frac{i-r}{1+r}\approx i-r$
+
+forward rate $(1+i_n)^n (1+f_n^{n+k})^k = (1+i_{n+k})^{n+k}$
+
+method of equated time. average term  to maturity  $\bar{t} = \frac{\sum tR_t}{\sum R_t}$
+
+Macaulay duration $\bar{d} = \frac{\sum tv^tR_t}{\sum v^tR_t}$, $\frac{d}{di}\bar{d}<0$
+
+\qquad $P=Fr(v+v^2+\dots+v^n)+Fv^n = F(1+(r-i)\axn)$, $-P'=F(r(Ia)_{\angln} +nv^n)$
+
+\qquad $\bar{d}=\frac{1+i}{i} - \frac{1+i+(r-i)n}{r[(1+i)^n-1]+i}$. $r=i$, $\bar{d} = \axxn$
+
+\qquad  first-order Macaulay approximation of the present-value $P(i)\approx P(i_0) \left(\frac{1+i_0}{1+i}\right)^{\bar{d}(i_0)}$
+
+volatility of PV.  modified duration $\bar{\nu} =- \frac{P'(i)}{P(i)} = -\frac{d}{di}\ln(P(i)) = \frac{\bar d}{1+i} = v\bar{d}$
+
+\qquad  first-order modified approximation of the present-value $P(i)\approx P(i_0)[1 - (i-i_0)\bar{v}(i_0)]$
+
+\qquad second-order modified approximation of the present value  $P(i)\approx P(i_0) \left(1-(i-i_0)\bar{v}(i_0) + \frac{(i-i_0)^2}{2}\bar{c}(i_0)\right)$
+
+\qquad portfolio  modified duration $\bar{\nu} = \sum \frac{Pk(i)}{P(i)}\bar{\nu}_k$ MV weighted
+
+Redington immunization (1) $P(i)=0$ (2) $P'(i)=0$ (3) $P''(i)>0$
+
+\qquad convexity $\bar{c} = \frac{P''(i)}{P(i)}$. $\frac{P(i+\epsilon)-P(i)}{P(i)} \approx -\epsilon\bar{\nu} + \frac{\epsilon^2}{2}\bar{c}$
+
+\qquad Macaulay duration $c_{Mac} = \frac{\sum t^2v^{t+2}R_t}{\sum v^tR_t}$. \quad Modified duration $c_{mod} = \frac{\sum t(t+1)v^{t+2}R_t}{\sum v^tR_t}=\frac{c_{Mac}+d_{Mac}}{(1+i)^2}$
+
+\qquad portfolio  convexity $\bar{c} = \sum \frac{Pk(i)}{P(i)}\bar{c}_k$ MV weighted
+
+full immunization (1) $P(i) =0$ (2) $P'(i) =0$ (3) $A$ at $t=k-a$, $-L$ at $t=k$, $B$ at $t=k+a$
+
+\qquad $L = Ae^{a\delta} + Be^{-a\delta}$, $Aae^{a\delta} = Bbe^{-b\delta}$, $B=A\frac{a}{b}e^{(a+b)\delta}$
+
+\qquad $S(\delta') = PV_{AB}(\delta') + PV_{L}(\delta') >0$ for $\delta'\ne \delta$
+\end{document}
